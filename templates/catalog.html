@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class=message>{{message}}</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="col-sm-3 col-lg-2 navbar-dark" id="myScrollspy">
+      <ul class="nav navbar-nav flex-column">
+        {% for i in catalog %}
+
+
+
+
+        <li class="nav-item">
+<a class="nav-link active" href=''>
+
+{{i.catalogname}}</a>
+        </li>
+{% endfor %}
+</ul>
+</nav>
+
+<div class="col-sm-9 col-lg-10 wrap">
+  {% for i in catalog %}
+     <div id = '{{i.catalogname}}'>
+      <a href ="{{url_for('showItem',catalogname=i.catalogname)}}">
+      <h1 class="title collapsible">{{i.catalogname}}</h1>
+     </a>
+     <div class="content">
+<p>{{i.description}}</p>
+<p class="book float-right">
+  <a href ="{{url_for('showItem',catalogname=i.catalogname)}}">-See his books-</a>
+</p>
+<div class="clear float-clear">
+</div>
+
+
+
+
+{%if 'username'  in session %}
+
+<div class = 'button'>
+  <a href="{{url_for('editCatalog',catalogname = catalog.catalogname)}}" >Edit {{ catalog.catalogname }}</a>
+  <a href="{{url_for('deleteCatalog',catalogname = catalog.catalogname)}}" >Delete {{ catalog.catalogname }}</a>
+</div>
+{% endif %}
+
+
+
+
+
+</div>
+</div>
+{% endfor %}
+
+{%if 'username' in session %}
+<div class="button">
+  <a href = "{{ url_for('newCatalog')}}" >Create New Catalog</a>
+</div>
+{% endif %}
+</div>
+</div>
+</div>
+
+{% endblock %}

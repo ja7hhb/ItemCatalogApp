@@ -1,0 +1,10 @@
+<header class="jumbotron bg-dark text-center row header">
+  <h1 class="col-2 logo"><a href="{{url_for('showCatalog')}}">PhilosophyApp</a></h1>
+        <h1 class="col-10 text-right">
+        {%if 'username' not in session %}
+	<a href="{{url_for('showLogin')}}">Login </a>
+	{% else %}
+	<a href="{{url_for('gdisconnect')}}">Logout </a>
+	{% endif %}
+    </h1>
+      </header>
