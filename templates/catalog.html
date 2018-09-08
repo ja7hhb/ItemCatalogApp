@@ -45,10 +45,13 @@
 
 
 {%if 'username'  in session %}
-
-<div class = 'button'>
-  <a href="{{url_for('editCatalog',catalogname = catalog.catalogname)}}" >Edit {{ catalog.catalogname }}</a>
-  <a href="{{url_for('deleteCatalog',catalogname = catalog.catalogname)}}" >Delete {{ catalog.catalogname }}</a>
+<div class="flex">
+<div class="EditCatalog">
+  <a href ="{{url_for('editCatalog',catalogname = catalog.catalogname)}}" >-Edit- {{ catalog.catalogname }}</a>
+</div>
+<div class="EditCatalog">
+<a href="{{url_for('deleteCatalog',catalogname = catalog.catalogname)}}" >-Delete- {{ catalog.catalogname }}</a>
+</div>
 </div>
 {% endif %}
 
@@ -61,8 +64,8 @@
 {% endfor %}
 
 {%if 'username' in session %}
-<div class="button">
-  <a href = "{{ url_for('newCatalog')}}" >Create New Catalog</a>
+  <div class="New float-right">
+  <a href = "{{ url_for('newCatalog')}}" >-Create New Catalog-</a>
 </div>
 {% endif %}
 </div>
