@@ -5,11 +5,11 @@ This is a RESTful web application about philosophy using Flask which can access 
 
 <img src="https://github.com/ja7hhb/ItemCatalogApp/blob/image/static/img/Screen%20Shot%202018-09-12%20at%204.16.45%20PM.png" height="100%" width="100%">
 
-<img src="https://github.com/ja7hhb/ItemCatalogApp/blob/image/static/img/Screen%20Shot%202018-09-12%20at%204.23.07%20PM.png" height="100%" width="100%">
-
 Passed permission to change web content when a user logs in, so a user can customize own.
 
 <img src="https://github.com/ja7hhb/ItemCatalogApp/blob/image/static/img/Screen%20Shot%202018-09-12%20at%204.23.19%20PM.png" height="100%" width="100%">
+
+<img src="https://github.com/ja7hhb/ItemCatalogApp/blob/image/static/img/Screen%20Shot%202018-09-12%20at%204.23.07%20PM.png" height="100%" width="100%">
 
 ## Requirements
 
