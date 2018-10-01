@@ -1,5 +1,5 @@
 # Item Catalog Web App
-URL: https://catalogitem00.herokuapp.com/
+URL:  http://itemcatalog.site
 
 This is a RESTful web application about philosophy using Flask which can access an SQL database and Implements OAuth using Google Sign-In.
 
