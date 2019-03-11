@@ -18,15 +18,18 @@ body {
     color: black;
   }
 
+
+
+
   .New {
 background-color: #333333;
  margin: 0px 30px;
  padding: 0px 20px;
   }
 
-  .inputNew{
+  .input{
     text-align: center;
-    margin-top: 200px;
+   padding-top: 200px;
   }
 
   .book {
@@ -60,7 +63,7 @@ background-color: #333333;
 
   .backImg {
   background: linear-gradient(rgba(16, 1, 1, 0.5), rgba(16, 1, 1, 0.5)),
-  url('static/img/book-dark-enlightenment-1029141.jpg');
+  url('../img/book-dark-enlightenment-1029141.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center; 

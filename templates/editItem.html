@@ -1,6 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
+<div class = 'input'>
 <h1>Edit Item Name : {{ item.name }}</h1>
 <form action="{{url_for('editItem',catalogname=catalogname,itemname=itemname)}}" method = 'post'>
 	<p>Item Name </p>
@@ -12,4 +13,5 @@
 	<p><input type='submit' value='Edit'></p>
 	<a href ="{{url_for('showItem',catalogname=catalogname)}}">Cancel</a>
 </form>
+</div>
 {% endblock %}

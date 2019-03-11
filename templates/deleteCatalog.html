@@ -1,9 +1,11 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
+<div class = 'input'>
 <h1> Are you sure you want to delete {{catalog.catalogname}}? </h1>
 <form action="{{url_for('deleteCatalog',catalogname = catalog.catalogname)}}" method = 'post'>
 	<input type='submit', value = 'Delete'>
 </form>
 <a href ="{{url_for('showCatalog')}}">Cancel</a>
+</div>
 {% endblock %}

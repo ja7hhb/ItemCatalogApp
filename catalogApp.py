@@ -32,10 +32,16 @@ session = DBSession()
 # Store it in the session for later validation
 @app.route('/login')
 def showLogin():
+
+    
+
     state = ''.join(random.choice(
         string.ascii_uppercase + string.digits) for x in range(32))
     login_session['state'] = state
     return render_template('login.html', STATE=state)
+
+    #catalog = session.query(Catalog).all()
+    #return render_template('catalog.html', catalog=catalog)
 
 
 # Log in the application using google sign in
@@ -109,7 +115,8 @@ def gconnect():
 
     data = answer.json()
 
-    login_session['username'] = data['name']
+    # login_session['username'] = data['name']
+    login_session['username'] = data['email']
     login_session['picture'] = data['picture']
     login_session['email'] = data['email']
     login_session['provider'] = 'google'

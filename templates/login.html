@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
 <script src="//apis.google.com/js/platform.js?onload=start"> </script>
 
+
 <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
+  <meta name="google-signin-client_id" content="52483331489-psfbj9mv577mgr7op6iq929smkks4ot6.apps.googleusercontent.com">
+
+
 
 
 </head>
@@ -18,15 +24,15 @@
 
 <!-- GOOGLE PLUS SIGN IN BUTTON-->
 
-          
+          <!-- class="g-signin" is problem-->
           <div id="signinButton">
-          <span class="g-signin"
+          <span class="g-signin2"
             data-scope="openid email"
             data-clientid="52483331489-psfbj9mv577mgr7op6iq929smkks4ot6.apps.googleusercontent.com"
             data-redirecturi="postmessage"
             data-accesstype="offline"
             data-cookiepolicy="single_host_origin"
-            data-callback="signInCallback"
+            data-onsuccess="signInCallback"
             data-approvalprompt="force">
           </span>
         </div>

@@ -2,7 +2,7 @@
 {% block content %}
 {% include "header.html" %}
 <h1>New Item</h1>
-<div class = 'pane'>
+<div class = 'input'>
 	<form action="{{url_for('newItem',catalogname = catalogname)}}" method = 'post'>
 		<dl>
 			<dt>Name:</dt>
@@ -14,6 +14,7 @@
 		</dl>
 		<input type='submit' value='Create'>
 	</form>
-</div>
+
 <a href ="{{url_for('showItem',catalogname=catalogname)}}">Cancel</a>
+</div>
 {% endblock %}

@@ -19,7 +19,7 @@
 
 
         <li class="nav-item">
-<a class="nav-link active" href=''>
+<a class="nav-link active" href='#{{i.catalogname}}'>
 
 {{i.catalogname}}</a>
         </li>
@@ -47,10 +47,10 @@
 {%if 'username'  in session %}
 <div class="flex">
 <div class="EditCatalog">
-  <a href ="{{url_for('editCatalog',catalogname = catalog.catalogname)}}" >-Edit- {{ catalog.catalogname }}</a>
+  <a href ="{{url_for('editCatalog',catalogname = i.catalogname)}}" >-Edit- {{ catalog.catalogname }}</a>
 </div>
 <div class="EditCatalog">
-<a href="{{url_for('deleteCatalog',catalogname = catalog.catalogname)}}" >-Delete- {{ catalog.catalogname }}</a>
+<a href="{{url_for('deleteCatalog',catalogname = i.catalogname)}}" >-Delete- {{ catalog.catalogname }}</a>
 </div>
 </div>
 {% endif %}
